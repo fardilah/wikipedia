@@ -20,7 +20,7 @@ ${FRANCE}       Français
 ${ZHONGWEN}     中文
 ${PORTUGIS}     Português
 
-${URL_EN}       https://en.wikipedia.org/git
+${URL_EN}       https://en.wikipedia.org/
 ${URL_ES}       https://es.wikipedia.org/
 ${URL_DE}       https://de.wikipedia.org/
 ${URL_IT}       https://it.wikipedia.org/
