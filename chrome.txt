@@ -1,0 +1,2 @@
+--variable browser:chrome
+--suite Chrome

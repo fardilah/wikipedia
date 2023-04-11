@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.6 on darwin)" generated="20230411 16:20:48.324" rpa="false" schemaversion="3">
+<suite id="s1" name="Wikipedia" source="/Users/bezzo/Documents/project/wikipedia/wikipedia.robot">
+<test id="s1-t1" name="Open Browser" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230411 16:20:48.694" level="INFO">Opening browser 'firefox' to base url 'https://www.wikipedia.org/'.</msg>
+<msg timestamp="20230411 16:20:48.695" level="INFO">Firefox driver log is always forced to to: /Users/bezzo/Documents/project/wikipedia/pabot_results/2/1/geckodriver-1.log</msg>
+<status status="PASS" starttime="20230411 16:20:48.693" endtime="20230411 16:20:59.791"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>390</arg>
+<arg>844</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20230411 16:20:59.793" endtime="20230411 16:21:00.409"/>
+</kw>
+<status status="PASS" starttime="20230411 16:20:48.692" endtime="20230411 16:21:00.410"/>
+</test>
+<test id="s1-t2" name="Check Wikipedia" line="15">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Wikipedia</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230411 16:21:01.176" level="INFO">Current page contains text 'Wikipedia'.</msg>
+<status status="PASS" starttime="20230411 16:21:00.415" endtime="20230411 16:21:01.177"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>The Free Encyclopedia</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230411 16:21:01.326" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230411 16:21:01.327" level="FAIL">Page should have contained text 'The Free Encyclopedia' but did not.</msg>
+<status status="FAIL" starttime="20230411 16:21:01.177" endtime="20230411 16:21:01.333"/>
+</kw>
+<status status="FAIL" starttime="20230411 16:21:00.413" endtime="20230411 16:21:01.334">Page should have contained text 'The Free Encyclopedia' but did not.</status>
+</test>
+<test id="s1-t3" name="Check Language - English" line="19">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-en"]/strong</arg>
+<arg>${ENGLISH}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.342" level="INFO">Verifying element 'xpath://*[@id="js-link-box-en"]/strong' contains exact text 'English'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.338" endtime="20230411 16:21:01.383"/>
+</kw>
+<tag>Language</tag>
+<status status="PASS" starttime="20230411 16:21:01.336" endtime="20230411 16:21:01.384"/>
+</test>
+<test id="s1-t4" name="Check Language - Spanyol" line="23">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-es"]/strong</arg>
+<arg>${ESPANOL}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.388" level="INFO">Verifying element 'xpath://*[@id="js-link-box-es"]/strong' contains exact text 'Español'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.385" endtime="20230411 16:21:01.418"/>
+</kw>
+<tag>Language</tag>
+<status status="PASS" starttime="20230411 16:21:01.384" endtime="20230411 16:21:01.419"/>
+</test>
+<test id="s1-t5" name="Check Language - Deutsch" line="27">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-de"]/strong</arg>
+<arg>${DEUTSCH}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.426" level="INFO">Verifying element 'xpath://*[@id="js-link-box-de"]/strong' contains exact text 'Deutsch'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.422" endtime="20230411 16:21:01.486"/>
+</kw>
+<tag>Language</tag>
+<status status="PASS" starttime="20230411 16:21:01.421" endtime="20230411 16:21:01.486"/>
+</test>
+<test id="s1-t6" name="Check Language - Italia" line="31">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-it"]/strong</arg>
+<arg>${ITALIANO}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.492" level="INFO">Verifying element 'xpath://*[@id="js-link-box-it"]/strong' contains exact text 'Italiano'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.490" endtime="20230411 16:21:01.503"/>
+</kw>
+<tag>Language</tag>
+<status status="PASS" starttime="20230411 16:21:01.488" endtime="20230411 16:21:01.504"/>
+</test>
+<test id="s1-t7" name="Check Language - Arab" line="35">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-fa"]/strong/bdi</arg>
+<arg>${FARSI}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.510" level="INFO">Verifying element 'xpath://*[@id="js-link-box-fa"]/strong/bdi' contains exact text 'فارسی'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.507" endtime="20230411 16:21:01.519"/>
+</kw>
+<tag>Language</tag>
+<status status="PASS" starttime="20230411 16:21:01.505" endtime="20230411 16:21:01.520"/>
+</test>
+<test id="s1-t8" name="Check Language - Russia" line="39">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-ru"]/strong</arg>
+<arg>${RUSSIA}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.525" level="INFO">Verifying element 'xpath://*[@id="js-link-box-ru"]/strong' contains exact text 'Русский'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.523" endtime="20230411 16:21:01.537"/>
+</kw>
+<tag>Language</tag>
+<status status="PASS" starttime="20230411 16:21:01.521" endtime="20230411 16:21:01.538"/>
+</test>
+<test id="s1-t9" name="Check Language - Nihongo" line="43">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-ja"]/strong</arg>
+<arg>${NIHONGO}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.543" level="INFO">Verifying element 'xpath://*[@id="js-link-box-ja"]/strong' contains exact text '日本語'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.541" endtime="20230411 16:21:01.555"/>
+</kw>
+<tag>Language</tag>
+<status status="PASS" starttime="20230411 16:21:01.540" endtime="20230411 16:21:01.556"/>
+</test>
+<test id="s1-t10" name="Check Language - Francis" line="47">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-fr"]/strong</arg>
+<arg>${FRANCE}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.561" level="INFO">Verifying element 'xpath://*[@id="js-link-box-fr"]/strong' contains exact text 'Français'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.559" endtime="20230411 16:21:01.572"/>
+</kw>
+<tag>Language</tag>
+<status status="PASS" starttime="20230411 16:21:01.557" endtime="20230411 16:21:01.573"/>
+</test>
+<test id="s1-t11" name="Check Language - Zhongwen" line="51">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-zh"]/strong</arg>
+<arg>${ZHONGWEN}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.580" level="INFO">Verifying element 'xpath://*[@id="js-link-box-zh"]/strong' contains exact text '中文'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.576" endtime="20230411 16:21:01.591"/>
+</kw>
+<tag>Language</tag>
+<status status="PASS" starttime="20230411 16:21:01.574" endtime="20230411 16:21:01.591"/>
+</test>
+<test id="s1-t12" name="Check Language - Portugis" line="55">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-pt"]/strong</arg>
+<arg>${PORTUGIS}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230411 16:21:01.594" level="INFO">Verifying element 'xpath://*[@id="js-link-box-pt"]/strong' contains exact text 'Português'.</msg>
+<msg timestamp="20230411 16:21:01.681" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230411 16:21:01.682" level="FAIL">Element with locator 'xpath://*[@id="js-link-box-pt"]/strong' not found.</msg>
+<status status="FAIL" starttime="20230411 16:21:01.593" endtime="20230411 16:21:01.684"/>
+</kw>
+<tag>Language</tag>
+<status status="FAIL" starttime="20230411 16:21:01.592" endtime="20230411 16:21:01.685">Element with locator 'xpath://*[@id="js-link-box-pt"]/strong' not found.</status>
+</test>
+<test id="s1-t13" name="Check Link - English" line="59">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-en"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:01.688" level="INFO">Clicking element 'xpath://*[@id="js-link-box-en"]'.</msg>
+<status status="PASS" starttime="20230411 16:21:01.687" endtime="20230411 16:21:02.307"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230411 16:21:02.313" level="INFO">${CURRENT_URL} = https://en.wikipedia.org/wiki/Main_Page</msg>
+<status status="PASS" starttime="20230411 16:21:02.308" endtime="20230411 16:21:02.313"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_EN}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230411 16:21:02.314" endtime="20230411 16:21:02.316"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230411 16:21:02.317" endtime="20230411 16:21:02.660"/>
+</kw>
+<tag>Link</tag>
+<status status="PASS" starttime="20230411 16:21:01.686" endtime="20230411 16:21:02.660"/>
+</test>
+<test id="s1-t14" name="Check Link - Spanyol" line="66">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-es"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:02.665" level="INFO">Clicking element 'xpath://*[@id="js-link-box-es"]'.</msg>
+<status status="PASS" starttime="20230411 16:21:02.664" endtime="20230411 16:21:03.133"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230411 16:21:03.142" level="INFO">${CURRENT_URL} = https://es.wikipedia.org/wiki/Wikipedia:Portada</msg>
+<status status="PASS" starttime="20230411 16:21:03.134" endtime="20230411 16:21:03.142"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_ES}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230411 16:21:03.143" endtime="20230411 16:21:03.145"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230411 16:21:03.146" endtime="20230411 16:21:03.642"/>
+</kw>
+<tag>Link</tag>
+<status status="PASS" starttime="20230411 16:21:02.662" endtime="20230411 16:21:03.643"/>
+</test>
+<test id="s1-t15" name="Check Link - Deutsch" line="73">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-de"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:03.648" level="INFO">Clicking element 'xpath://*[@id="js-link-box-de"]'.</msg>
+<status status="PASS" starttime="20230411 16:21:03.646" endtime="20230411 16:21:04.112"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230411 16:21:04.119" level="INFO">${CURRENT_URL} = https://de.wikipedia.org/wiki/Wikipedia:Hauptseite</msg>
+<status status="PASS" starttime="20230411 16:21:04.113" endtime="20230411 16:21:04.119"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_DE}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230411 16:21:04.120" endtime="20230411 16:21:04.121"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230411 16:21:04.122" endtime="20230411 16:21:04.404"/>
+</kw>
+<tag>Link</tag>
+<status status="PASS" starttime="20230411 16:21:03.644" endtime="20230411 16:21:04.405"/>
+</test>
+<test id="s1-t16" name="Check Link - Italia" line="80">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-it"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:04.413" level="INFO">Clicking element 'xpath://*[@id="js-link-box-it"]'.</msg>
+<status status="PASS" starttime="20230411 16:21:04.410" endtime="20230411 16:21:04.789"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230411 16:21:04.798" level="INFO">${CURRENT_URL} = https://it.wikipedia.org/wiki/Pagina_principale</msg>
+<status status="PASS" starttime="20230411 16:21:04.790" endtime="20230411 16:21:04.798"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_IT}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230411 16:21:04.798" endtime="20230411 16:21:04.800"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230411 16:21:04.800" endtime="20230411 16:21:05.135"/>
+</kw>
+<tag>Link</tag>
+<status status="PASS" starttime="20230411 16:21:04.408" endtime="20230411 16:21:05.135"/>
+</test>
+<test id="s1-t17" name="Check Link - Arab" line="87">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-fa"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:05.140" level="INFO">Clicking element 'xpath://*[@id="js-link-box-fa"]'.</msg>
+<status status="PASS" starttime="20230411 16:21:05.139" endtime="20230411 16:21:05.671"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230411 16:21:05.675" level="INFO">${CURRENT_URL} = https://fa.wikipedia.org/wiki/%D8%B5%D9%81%D8%AD%D9%87%D9%94_%D8%A7%D8%B5%D9%84%DB%8C</msg>
+<status status="PASS" starttime="20230411 16:21:05.672" endtime="20230411 16:21:05.675"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_FA}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230411 16:21:05.675" endtime="20230411 16:21:05.676"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230411 16:21:05.677" endtime="20230411 16:21:05.858"/>
+</kw>
+<tag>Link</tag>
+<status status="PASS" starttime="20230411 16:21:05.136" endtime="20230411 16:21:05.859"/>
+</test>
+<test id="s1-t18" name="Check Link - Russia" line="94">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-ru"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:05.863" level="INFO">Clicking element 'xpath://*[@id="js-link-box-ru"]'.</msg>
+<status status="PASS" starttime="20230411 16:21:05.861" endtime="20230411 16:21:06.245"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230411 16:21:06.251" level="INFO">${CURRENT_URL} = https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0</msg>
+<status status="PASS" starttime="20230411 16:21:06.246" endtime="20230411 16:21:06.251"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_RU}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230411 16:21:06.252" endtime="20230411 16:21:06.253"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230411 16:21:06.254" endtime="20230411 16:21:06.670"/>
+</kw>
+<tag>Link</tag>
+<status status="PASS" starttime="20230411 16:21:05.860" endtime="20230411 16:21:06.671"/>
+</test>
+<test id="s1-t19" name="Check Link - Nihongo" line="101">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-ja"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:06.677" level="INFO">Clicking element 'xpath://*[@id="js-link-box-ja"]'.</msg>
+<status status="PASS" starttime="20230411 16:21:06.675" endtime="20230411 16:21:07.186"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230411 16:21:07.191" level="INFO">${CURRENT_URL} = https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8</msg>
+<status status="PASS" starttime="20230411 16:21:07.187" endtime="20230411 16:21:07.192"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_JA}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230411 16:21:07.192" endtime="20230411 16:21:07.194"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230411 16:21:07.195" endtime="20230411 16:21:07.670"/>
+</kw>
+<tag>Link</tag>
+<status status="PASS" starttime="20230411 16:21:06.673" endtime="20230411 16:21:07.671"/>
+</test>
+<test id="s1-t20" name="Check Link - Francis" line="108">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-fr"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:07.674" level="INFO">Clicking element 'xpath://*[@id="js-link-box-fr"]'.</msg>
+<status status="PASS" starttime="20230411 16:21:07.673" endtime="20230411 16:21:08.196"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230411 16:21:08.229" level="INFO">${CURRENT_URL} = https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal</msg>
+<status status="PASS" starttime="20230411 16:21:08.197" endtime="20230411 16:21:08.229"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_FR}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230411 16:21:08.230" endtime="20230411 16:21:08.233"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230411 16:21:08.234" endtime="20230411 16:21:08.558"/>
+</kw>
+<tag>Link</tag>
+<status status="PASS" starttime="20230411 16:21:07.672" endtime="20230411 16:21:08.559"/>
+</test>
+<test id="s1-t21" name="Check Link - Zhongwen" line="115">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-zh"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:08.565" level="INFO">Clicking element 'xpath://*[@id="js-link-box-zh"]'.</msg>
+<status status="PASS" starttime="20230411 16:21:08.563" endtime="20230411 16:21:09.103"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230411 16:21:09.111" level="INFO">${CURRENT_URL} = https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5</msg>
+<status status="PASS" starttime="20230411 16:21:09.103" endtime="20230411 16:21:09.111"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_ZH}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230411 16:21:09.111" endtime="20230411 16:21:09.113"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230411 16:21:09.114" endtime="20230411 16:21:09.524"/>
+</kw>
+<tag>Link</tag>
+<status status="PASS" starttime="20230411 16:21:08.560" endtime="20230411 16:21:09.525"/>
+</test>
+<test id="s1-t22" name="Check Link - Portugis" line="122">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="js-link-box-pt"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230411 16:21:09.529" level="INFO">Clicking element 'xpath://*[@id="js-link-box-pt"]'.</msg>
+<msg timestamp="20230411 16:21:09.855" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230411 16:21:09.855" level="FAIL">Element with locator 'xpath://*[@id="js-link-box-pt"]' not found.</msg>
+<status status="FAIL" starttime="20230411 16:21:09.528" endtime="20230411 16:21:09.856"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${CURRENT_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20230411 16:21:09.857" endtime="20230411 16:21:09.858"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${CURRENT_URL}</arg>
+<arg>${URL_PT}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="NOT RUN" starttime="20230411 16:21:09.859" endtime="20230411 16:21:09.860"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230411 16:21:09.860" endtime="20230411 16:21:09.861"/>
+</kw>
+<tag>Link</tag>
+<status status="FAIL" starttime="20230411 16:21:09.526" endtime="20230411 16:21:09.862">Element with locator 'xpath://*[@id="js-link-box-pt"]' not found.</status>
+</test>
+<test id="s1-t23" name="Close Browser" line="129">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230411 16:21:09.866" endtime="20230411 16:21:10.708"/>
+</kw>
+<status status="PASS" starttime="20230411 16:21:09.864" endtime="20230411 16:21:10.708"/>
+</test>
+<doc>Template robot main suite.</doc>
+<status status="FAIL" starttime="20230411 16:20:48.335" endtime="20230411 16:21:10.710"/>
+</suite>
+<statistics>
+<total>
+<stat pass="20" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="9" fail="1" skip="0">Language</stat>
+<stat pass="9" fail="1" skip="0">Link</stat>
+</tag>
+<suite>
+<stat pass="20" fail="3" skip="0" id="s1" name="Wikipedia">Wikipedia</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

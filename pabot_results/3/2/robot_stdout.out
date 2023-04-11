@@ -1,0 +1,173 @@
+==============================================================================
+Wikipedia :: Template robot main suite.                                       
+==============================================================================
+Open Browser                                                          | PASS |
+------------------------------------------------------------------------------
+Check Wikipedia                                                       | PASS |
+------------------------------------------------------------------------------
+Check Language - English                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Spanyol                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Deutsch                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Italia                                               | PASS |
+------------------------------------------------------------------------------
+Check Language - Arab                                                 | PASS |
+------------------------------------------------------------------------------
+Check Language - Russia                                               | PASS |
+------------------------------------------------------------------------------
+Check Language - Nihongo                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Francis                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Zhongwen                                             | PASS |
+------------------------------------------------------------------------------
+Check Language - Portugis                                             | PASS |
+------------------------------------------------------------------------------
+Check Link - English                                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:59
+    T:  Check Link - English    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:63
+      Should Match Regexp    ${CURRENT_URL}    ${URL_EN}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_EN} = https://en.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://en.wikipedia.org/'
+------------------------------------------------------------------------------
+Check Link - Spanyol                                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:66
+    T:  Check Link - Spanyol    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:70
+      Should Match Regexp    ${CURRENT_URL}    ${URL_ES}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_ES} = https://es.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://es.wikipedia.org/'
+------------------------------------------------------------------------------
+Check Link - Deutsch                                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:73
+    T:  Check Link - Deutsch    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:77
+      Should Match Regexp    ${CURRENT_URL}    ${URL_DE}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_DE} = https://de.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://de.wikipedia.org/'
+------------------------------------------------------------------------------
+Check Link - Italia                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:80
+    T:  Check Link - Italia    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:84
+      Should Match Regexp    ${CURRENT_URL}    ${URL_IT}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_IT} = https://it.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://it.wikipedia.org/'
+------------------------------------------------------------------------------
+Check Link - Arab                                                       
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:87
+    T:  Check Link - Arab    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:91
+      Should Match Regexp    ${CURRENT_URL}    ${URL_FA}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_FA} = https://fa.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://fa.wikipedia.org/'
+------------------------------------------------------------------------------
+Check Link - Russia                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:94
+    T:  Check Link - Russia    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:98
+      Should Match Regexp    ${CURRENT_URL}    ${URL_RU}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_RU} = https://ru.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://ru.wikipedia.org/'
+------------------------------------------------------------------------------
+Check Link - Nihongo                                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:101
+    T:  Check Link - Nihongo    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:105
+      Should Match Regexp    ${CURRENT_URL}    ${URL_JA}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_JA} = https://ja.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://ja.wikipedia.org/'
+------------------------------------------------------------------------------
+Check Link - Francis                                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:108
+    T:  Check Link - Francis    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:112
+      Should Match Regexp    ${CURRENT_URL}    ${URL_FR}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_FR} = https://fr.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://fr.wikipedia.org/'
+------------------------------------------------------------------------------
+Check Link - Zhongwen                                                   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:115
+    T:  Check Link - Zhongwen    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:119
+      Should Match Regexp    ${CURRENT_URL}    ${URL_ZH}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_ZH} = https://zh.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://zh.wikipedia.org/'
+------------------------------------------------------------------------------
+Check Link - Portugis                                                   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:122
+    T:  Check Link - Portugis    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:126
+      Should Match Regexp    ${CURRENT_URL}    ${URL_PT}
+      |  ${CURRENT_URL} = https://www.wikipedia.org/ (str)
+      |  ${URL_PT} = https://pt.wikipedia.org/ (str)
+______________________________________________________________________________
+| FAIL |
+'https://www.wikipedia.org/' does not match 'https://pt.wikipedia.org/'
+------------------------------------------------------------------------------
+Close Browser                                                         | PASS |
+------------------------------------------------------------------------------
+Wikipedia :: Template robot main suite.                               | FAIL |
+23 tests, 13 passed, 10 failed
+==============================================================================
+Output:  /Users/bezzo/Documents/project/wikipedia/pabot_results/3/2/output.xml

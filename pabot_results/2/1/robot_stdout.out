@@ -1,0 +1,84 @@
+==============================================================================
+Wikipedia :: Template robot main suite.                                       
+==============================================================================
+Open Browser                                                          | PASS |
+------------------------------------------------------------------------------
+Check Wikipedia                                                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:15
+    T:  Check Wikipedia    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:17
+      Page Should Contain    The Free Encyclopedia
+______________________________________________________________________________
+| FAIL |
+Page should have contained text 'The Free Encyclopedia' but did not.
+------------------------------------------------------------------------------
+Check Language - English                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Spanyol                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Deutsch                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Italia                                               | PASS |
+------------------------------------------------------------------------------
+Check Language - Arab                                                 | PASS |
+------------------------------------------------------------------------------
+Check Language - Russia                                               | PASS |
+------------------------------------------------------------------------------
+Check Language - Nihongo                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Francis                                              | PASS |
+------------------------------------------------------------------------------
+Check Language - Zhongwen                                             | PASS |
+------------------------------------------------------------------------------
+Check Language - Portugis                                               
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:55
+    T:  Check Language - Portugis    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:57
+      Element Text Should Be    xpath://*[@id="js-link-box-pt"]/strong    ${PORTUGIS}
+      |  ${PORTUGIS} = Português (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator 'xpath://*[@id="js-link-box-pt"]/strong' not found.
+------------------------------------------------------------------------------
+Check Link - English                                                  | PASS |
+------------------------------------------------------------------------------
+Check Link - Spanyol                                                  | PASS |
+------------------------------------------------------------------------------
+Check Link - Deutsch                                                  | PASS |
+------------------------------------------------------------------------------
+Check Link - Italia                                                   | PASS |
+------------------------------------------------------------------------------
+Check Link - Arab                                                     | PASS |
+------------------------------------------------------------------------------
+Check Link - Russia                                                   | PASS |
+------------------------------------------------------------------------------
+Check Link - Nihongo                                                  | PASS |
+------------------------------------------------------------------------------
+Check Link - Francis                                                  | PASS |
+------------------------------------------------------------------------------
+Check Link - Zhongwen                                                 | PASS |
+------------------------------------------------------------------------------
+Check Link - Portugis                                                   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:122
+    T:  Check Link - Portugis    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/bezzo/Documents/project/wikipedia/wikipedia.robot:124
+      Click Element    xpath://*[@id="js-link-box-pt"]
+______________________________________________________________________________
+| FAIL |
+Element with locator 'xpath://*[@id="js-link-box-pt"]' not found.
+------------------------------------------------------------------------------
+Close Browser                                                         | PASS |
+------------------------------------------------------------------------------
+Wikipedia :: Template robot main suite.                               | FAIL |
+23 tests, 20 passed, 3 failed
+==============================================================================
+Output:  /Users/bezzo/Documents/project/wikipedia/pabot_results/2/1/output.xml
